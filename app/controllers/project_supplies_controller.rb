@@ -1,0 +1,2 @@
+class ProjectSuppliesController < ApplicationController
+end
