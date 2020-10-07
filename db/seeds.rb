@@ -13,34 +13,38 @@ ProjectSupply.destroy_all
 
 sanam = User.create(
     username: "Sanam", 
-    password: "password"
+    password: "password",
+    address: "537 3d St NE Washington, Dc 20002"
 )
 bridget= User.create(
     username: "Bridget", 
-    password: "password"
+    password: "password",
+    address: "3611 11th St NW Washington, Dc 20010"
+
 )
 
 project1 = Project.create(
     user_id: sanam.id,
-    name: "Bird House"
+    name: "Bird House",
+    ImageUrl: "https://www.thesprucecrafts.com/thmb/0lyuksJbO3I7igJ3Z2ryyY5LfVE=/735x0/spruce-diy-birdfeeder06b-5abd03403128340037c6ac11.jpg"
 )
 
 project2 = Project.create(
     user_id: bridget.id,
-    name: "Bottle Cap Art"
+    name: "Bottle Cap Art",
+    ImageUrl: "https://www.bottlecapartwork.com/Bottle_Cap_Artwork/BottleCapArtwork.com_files/shapeimage_6.png"
 )
 
 p1Supply = Supply.create(
     description: "pieces of plywood",
     name: "Plywood",
-    address: "537 3rd st NE, Washington, DC 20002"
-
+    has_item: true
 )
 
 p2Supply = Supply.create(
     description: "used soda bottle caps",
     name: "Soda Bottle Caps",
-    address: "3611 11th st NW, Washington, DC 20010"
+    has_item: true
 )
 
 p1ProjectSupply = ProjectSupply.create(project_id: project1.id, supply_id: p1Supply.id )
