@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
     def index
         projects = Project.all
-        render json: projects, only: [:id, :name, :user_id, :ImageUrl, :supplies]
+        render json: projects, only: [:id, :name, :user_id, :ImageUrl, :description]
     end
 
     def show
@@ -12,6 +12,7 @@ class ProjectsController < ApplicationController
     end
 
     def create
+        # byebug
         project = Project.create(project_params)
         render json: project
     end
@@ -35,7 +36,7 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-        params.require(:project).permit(:id, :name, :user_id, :ImageUrl, :supplies)
+        params.permit(:id, :name, :user_id, :ImageUrl, :description)
     
     end
 

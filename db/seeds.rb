@@ -26,7 +26,7 @@ bridget= User.create(
 project1 = Project.create(
     user_id: sanam.id,
     name: "Bird House",
-    description: "Create this tiny home from left over pieces of plywood",
+    description: "Created this tiny home from left over pieces of plywood",
     ImageUrl: "https://www.thesprucecrafts.com/thmb/0lyuksJbO3I7igJ3Z2ryyY5LfVE=/735x0/spruce-diy-birdfeeder06b-5abd03403128340037c6ac11.jpg"
 )
 
