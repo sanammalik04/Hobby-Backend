@@ -26,12 +26,14 @@ bridget= User.create(
 project1 = Project.create(
     user_id: sanam.id,
     name: "Bird House",
+    description: "Create this tiny home from left over pieces of plywood",
     ImageUrl: "https://www.thesprucecrafts.com/thmb/0lyuksJbO3I7igJ3Z2ryyY5LfVE=/735x0/spruce-diy-birdfeeder06b-5abd03403128340037c6ac11.jpg"
 )
 
 project2 = Project.create(
     user_id: bridget.id,
     name: "Bottle Cap Art",
+    description: "This are was so much fun. Used all the soda caps I had!",
     ImageUrl: "https://www.bottlecapartwork.com/Bottle_Cap_Artwork/BottleCapArtwork.com_files/shapeimage_6.png"
 )
 
@@ -47,7 +49,13 @@ p2Supply = Supply.create(
     has_item: true
 )
 
-p1ProjectSupply = ProjectSupply.create(project_id: project1.id, supply_id: p1Supply.id )
-p2ProjectSupply = ProjectSupply.create(project_id: project2.id, supply_id: p2Supply.id )
+p1ProjectSupply = ProjectSupply.create(
+    project_id: project1.id, 
+    supply_id: p1Supply.id 
+)
+p2ProjectSupply = ProjectSupply.create(
+    project_id: project2.id, 
+    supply_id: p2Supply.id 
+)
 
 puts "Alhumdolilah!"
