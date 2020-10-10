@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
     belongs_to :user
-    has_many :projectSupplies, dependent: :destroy
-    has_many :supplies, through: :projectSupplies
+    has_many :project_supplies
+    has_many :supplies, through: :project_supplies
 end
