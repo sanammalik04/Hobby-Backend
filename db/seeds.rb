@@ -27,14 +27,16 @@ project1 = Project.create(
     user_id: sanam.id,
     name: "Bird House",
     description: "Created this tiny home from left over pieces of plywood",
-    ImageUrl: "https://www.thesprucecrafts.com/thmb/0lyuksJbO3I7igJ3Z2ryyY5LfVE=/735x0/spruce-diy-birdfeeder06b-5abd03403128340037c6ac11.jpg"
+    ImageUrl: "https://www.thesprucecrafts.com/thmb/0lyuksJbO3I7igJ3Z2ryyY5LfVE=/735x0/spruce-diy-birdfeeder06b-5abd03403128340037c6ac11.jpg",
+    original: true
 )
 
 project2 = Project.create(
     user_id: bridget.id,
     name: "Bottle Cap Art",
     description: "This are was so much fun. Used all the soda caps I had!",
-    ImageUrl: "https://www.bottlecapartwork.com/Bottle_Cap_Artwork/BottleCapArtwork.com_files/shapeimage_6.png"
+    ImageUrl: "https://www.bottlecapartwork.com/Bottle_Cap_Artwork/BottleCapArtwork.com_files/shapeimage_6.png",
+    original: true
 )
 
 p1Supply = Supply.create(
