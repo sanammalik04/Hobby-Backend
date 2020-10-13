@@ -32,6 +32,11 @@ class UsersController < ApplicationController
         end
     end
 
+    # def destroy
+    #     @user.destroy
+    #     render json: "User Destroyed"
+    # end
+
     private
 
     def find_user

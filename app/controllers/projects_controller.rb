@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-    before_action :find_project, only: [:show, :update]
+    before_action :find_project, only: [:show, :destroy]
 
     def index
         projects = Project.all.where(original: true)
