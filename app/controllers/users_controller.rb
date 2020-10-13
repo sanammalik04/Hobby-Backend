@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    before_action :find_user, only: [:show]
     skip_before_action :logged_in?, only: [:create]
 
     def index
@@ -8,9 +8,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        # byebug
-        user = User.find_by(params[:id])
-        render json: user
+        render json: @user
     end
 
     # def create
@@ -36,10 +34,15 @@ class UsersController < ApplicationController
 
     private
 
+    def find_user
+        @user = User.find(params[:id])
+    end
 
     def user_params
         params.permit(:id, :username, :password, :address)
     end
+
+    
 
 
 
