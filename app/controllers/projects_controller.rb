@@ -4,17 +4,17 @@ class ProjectsController < ApplicationController
 
     def index
         projects = Project.all.where(original: true)
-        render json: projects, only: [:id, :name, :user_id, :ImageUrl, :description, :original]
+        render json: projects, only: [:id, :name, :user_id, :ImageUrl, :description, :original], include: [:supplies]
     end
 
     def show
-        render json: @project
+        render json: @project, include: [:supplies]
     end
 
     def create
         # byebug
         project = Project.create(project_params)
-        render json: project
+        render json: project, include: [:supplies]
     end
 
     def update

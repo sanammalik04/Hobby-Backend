@@ -4,7 +4,7 @@ class SuppliesController < ApplicationController
     
     def index
         supplies = Supply.all
-        render json: supplies, only: [:id, :description, :name]
+        render json: supplies, only: [:id, :description, :name], include: [:projects]
     end
 
     def show

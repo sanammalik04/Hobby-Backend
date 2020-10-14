@@ -2,21 +2,19 @@ class UsersController < ApplicationController
     before_action :find_user, only: [:show]
     skip_before_action :logged_in?, only: [:create]
 
+
     def index
         users = User.all
-        render json: users, only: [:id, :username, :password, :address], include: [:projects]
+        render json: users, only: [:id, :username, :password, :address], include: [projects: [:supplies]]
     end
+
+    
 
     def show
-        render json: @user
+        render json: @user, include: [projects: [:supplies]]
     end
 
-    # def create
-    #     user = User.create(user_params)
-    #     render json: user
-    
-    # end
-
+ 
     
     def create
         # byebug
