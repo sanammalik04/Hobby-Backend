@@ -15,7 +15,7 @@ class SuppliesController < ApplicationController
         supply = Supply.create(supply_params)
         render json: supply
     end
-
+   
     def update
         @supply.update(supply_params)
         render json: @supply
@@ -33,7 +33,7 @@ class SuppliesController < ApplicationController
     end
 
     def supply_params
-        params.require(:supply).permit(:id, :name, :description)
+        params.permit(:id, :name, :description)
     end
 
 end

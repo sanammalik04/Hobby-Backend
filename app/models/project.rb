@@ -3,6 +3,7 @@ class Project < ApplicationRecord
     has_many :projectSupplies
     has_many :supplies, through: :projectSupplies
 
+    
 
   
 end

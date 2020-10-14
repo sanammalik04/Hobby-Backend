@@ -12,8 +12,11 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        # byebug
         project = Project.create(project_params)
+        params[:supplies].each do |supply|
+            project.supplies << Supply.create(name:supply)
+        end 
+        # byebug
         render json: project, include: [:supplies]
     end
 
