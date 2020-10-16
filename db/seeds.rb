@@ -14,21 +14,28 @@ ProjectSupply.destroy_all
 sanam = User.create(
     username: "Sanam", 
     password: "password",
-    address: "537 3d St NE Washington, Dc 20002"
+    address: "537 3d St, NE, Washington, DC 20002"
 )
 bridget= User.create(
     username: "Bridget", 
     password: "password",
-    address: "3611 11th St NW Washington, Dc 20010"
+    address: "3611 11th St, NW, Washington, DC 20010"
 
 )
+
+# safsof = User.create(
+#     username: 'Safsof',
+#     password: '1234'
+#     address: "809 Otis Place, NW, Washington, DC 20010"
+# )
 
 project1 = Project.create(
     user_id: sanam.id,
     name: "Bird House",
     description: "Created this tiny home from left over pieces of plywood",
     ImageUrl: "https://www.thesprucecrafts.com/thmb/0lyuksJbO3I7igJ3Z2ryyY5LfVE=/735x0/spruce-diy-birdfeeder06b-5abd03403128340037c6ac11.jpg",
-    original: true
+    original: true, 
+    completed: false
 )
 
 project2 = Project.create(
@@ -36,19 +43,84 @@ project2 = Project.create(
     name: "Bottle Cap Art",
     description: "This are was so much fun. Used all the soda caps I had!",
     ImageUrl: "https://www.bottlecapartwork.com/Bottle_Cap_Artwork/BottleCapArtwork.com_files/shapeimage_6.png",
-    original: true
+    original: true,
+    completed: false
 )
 
+# project3 = Project.create(
+#     user_id: safsof,
+#     name: ""
+#     description:
+#     imagUrl:
+#     original: true,
+#     completed: false
+
+# )
+
+# project3 = Project.create(
+#     user_id:
+#     name:
+#     description:
+#     imagUrl:
+#     original: true
+# )
+
+# project3 = Project.create(
+#     user_id:
+#     name:
+#     description:
+#     imagUrl:
+#     original: true
+# )
+
+# project3 = Project.create(
+#     user_id:
+#     name:
+#     description:
+#     imagUrl:
+#     original: true
+# )
+
+# project3 = Project.create(
+#     user_id:
+#     name:
+#     description:
+#     imagUrl:
+#     original: true
+# )
+
+# project3 = Project.create(
+#     user_id:
+#     name:
+#     description:
+#     imagUrl:
+#     original: true
+# )
+
+# project3 = Project.create(
+#     user_id:
+#     name:
+#     description:
+#     imagUrl:
+#     original: true
+# )
+
+# project3 = Project.create(
+#     user_id:
+#     name:
+#     description:
+#     imagUrl:
+#     original: true
+# )
+
 p1Supply = Supply.create(
-    description: "pieces of plywood",
     name: "Plywood",
-    has_item: true
+    has_item: false
 )
 
 p2Supply = Supply.create(
-    description: "used soda bottle caps",
     name: "Soda Bottle Caps",
-    has_item: true
+    has_item: false
 )
 
 p1ProjectSupply = ProjectSupply.create(

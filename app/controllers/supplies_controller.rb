@@ -4,7 +4,7 @@ class SuppliesController < ApplicationController
     
     def index
         supplies = Supply.all
-        render json: supplies, only: [:id, :description, :name], include: [:projects]
+        render json: supplies, only: [:id, :name, :has_item], include: [:projects]
     end
 
     def show
@@ -33,7 +33,7 @@ class SuppliesController < ApplicationController
     end
 
     def supply_params
-        params.permit(:id, :name, :description)
+        params.permit(:id, :name, :has_item)
     end
 
 end
