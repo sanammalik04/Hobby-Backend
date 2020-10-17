@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :supplies
   resources :project_supplies
+ 
   # resources :trash_nothing_items
   post '/login', to: 'auth#create'
   get '/items', to: 'trash_nothing_items#index'
