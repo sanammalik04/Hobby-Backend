@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-    before_action :find_project, only: [:show, :destroy]
+    before_action :find_project, only: [:show, :destroy, :update]
 
     def index
         projects = Project.all.where(original: true)
@@ -42,8 +42,6 @@ class ProjectsController < ApplicationController
         params.require(:project).permit(:id, :name, :user_id, :ImageUrl, :description, :original)
     
     end
-
-
 
 
 
