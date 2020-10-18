@@ -118,6 +118,11 @@ p1Supply = Supply.create(
     has_item: false
 )
 
+p1Supply2 = Supply.create(
+    name: "Chain",
+    has_item: false
+)
+
 p2Supply = Supply.create(
     name: "Soda Bottle Caps",
     has_item: false
@@ -130,6 +135,11 @@ p1ProjectSupply = ProjectSupply.create(
 p2ProjectSupply = ProjectSupply.create(
     project_id: project2.id, 
     supply_id: p2Supply.id 
+)
+
+p1ProjectSupply2 = ProjectSupply.create(
+    project_id: project1.id,
+    supply_id: p1Supply2.id
 )
 
 

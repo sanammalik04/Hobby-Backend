@@ -4,6 +4,11 @@ class ProjectSuppliesController < ApplicationController
         projectSupplies = ProjectSupply.all
         render json: projectSupplies
     end
+
+    def show
+        render json: @projectSupply
+    end
+
     
     def create
         projectSupplies = ProjectSupply.create(projectSupplies_params)
