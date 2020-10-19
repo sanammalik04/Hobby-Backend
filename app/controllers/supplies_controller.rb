@@ -16,6 +16,11 @@ class SuppliesController < ApplicationController
         render json: supply
     end
    
+    def edit
+        @supply = Supply.find(params[:id])
+        render json: @supply 
+    end
+    
     def update
         @supply.update(supply_params)
         render json: @supply
@@ -26,8 +31,8 @@ class SuppliesController < ApplicationController
         render json: "Item Deleted!"
     end
 
-    private
 
+    private
     def find_supply
         @supply = Supply.find(params[:id])
     end
