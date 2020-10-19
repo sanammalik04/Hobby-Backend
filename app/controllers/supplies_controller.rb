@@ -1,6 +1,6 @@
 class SuppliesController < ApplicationController
 
-    before_action :find_supply, only: [:show, :update]
+    before_action :find_supply, only: [:show, :update, :destroy]
     
     def index
         supplies = Supply.all
