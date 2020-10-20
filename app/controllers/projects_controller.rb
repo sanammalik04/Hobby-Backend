@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
 
     def index
         projects = Project.all.where(original: true)
-        render json: projects, only: [:id, :name, :user_id, :ImageUrl, :description, :original], include: [:supplies]
+        render json: projects, only: [:id, :name, :user_id, :ImageUrl, :description, :original, :completed, :directions], include: [:supplies]
     end
 
     def show
@@ -53,7 +53,7 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-        params.require(:project).permit(:id, :name, :user_id, :ImageUrl, :description, :original) 
+        params.require(:project).permit(:id, :name, :user_id, :ImageUrl, :description, :original, :completed, :directions) 
     
     end
 
